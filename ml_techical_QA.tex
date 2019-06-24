@@ -21,7 +21,7 @@ Determine the first and second derivative with respect to $x$ of: $f(x)= \frac{1
 \noindent Second Derivative:  \\
  $$f'(x) = \frac{e^{-x}}{(1 + e^{-x})^{2}}$$ \\
  Using Quotient Rule of Differentiation \\ \\
- $g(x) = e^{-x}$  \qquad  $h(x) = (1 + e^{-x})^{2} $ \\
+ $g(x) = e^{-x}$  \qquad  $h(x) = (1 + e^{-x})^{2} $ \\\\
  $ g'(x) = -e^{x} $ \qquad $h'(x) = -2e^{-x}(1 + e^{-x}) $ \\
  $$f''(x) = \frac{h \times g' - g \times h' }{g^2} $$ \\
  $$f''(x) = \frac{-e^{-x} \times (1 + e^{-x})^{2} \enspace + \enspace 2e^{-2x} \times (1 + e^{-x})}{e^{-2x}} $$\\
@@ -29,9 +29,39 @@ Determine the first and second derivative with respect to $x$ of: $f(x)= \frac{1
  
 \section{Problem 3}
  If I break a stick of unit length into three random pieces, what is the expected length of the largest piece? (You may need to state the assumptions that you make.)
+ 
+\subsection{Solution to Problem 3}
+Let the stick be broken at two points $X$ and $Y$. \\
+Therefore, we have two independent random variables $X$, $Y$ which are both uniform in [0,1]. \\
+Let $A=min(X,Y)$, $B=max(X,Y)$ and $C=max(A,1-B,B-A)$. \\ \\
+Let $f_{C}(a)$ be the probability density function (pdf) of C and $ F_{c}(a)$ be the cummulative distribution function (cdf). Then: 
+
+$$ F_{c}(a) = P(C \le a) = P(A \le a, 1-B \le a, B-A \le a)$$
+The cdf for the unit square is then equivalent to: \\\\
+\[F_{c}(a) = \left\{
+\begin{array}{lr}
+(3a-1)^2 & : \frac{1}{3} \le a \le \frac{1}{2} \\\\
+1-3(1-a)^2 & : \frac{1}{2} \le a \le 1
+\end{array}
+\right.
+\]
+
+Then the pdf is: \\\\
+\[f_{c}(a) = \left\{
+\begin{array}{lr}
+6(3a-1) & : \frac{1}{3} \le a \le \frac{1}{2} \\\\
+6(1-a) & : \frac{1}{2} \le a \le 1
+\end{array}
+\right.
+\]
+\\
+Therefore, the expected length of the largest piece (C) is: \\\\
+$$\int_{\frac{1}{2}}^{\frac{1}{3}} 6a(3a-1)da + \int_{1}^{\frac{1}{2}} 6a(1-a)da = \frac{11}{18}$$
+
 
 \section{Problem 8}
-What are the values of the constants $a$, $b$ and $c$ if one writes the following expression in the form: $ a(x - b)^{2} + c$ \\
+What are the values of the constants $a$, $b$ and $c$ if one writes the following expression in the form: $ a(x - b)^{2} + c$ \\ 
+
  \begin{equation}\label{key}
  3x^{2} - 4x + 5
  \end{equation}
