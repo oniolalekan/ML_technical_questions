@@ -2,6 +2,7 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{amsmath}
+\usepackage{amssymb}
 
 \begin{document}
 
@@ -144,6 +145,10 @@ Consider $n$ chords on a circle, each defined by its endpoints. Describe an $O(n
 	number of inversions (based on key value), with the caveat that an inversion from key $i$ to key $j$ (with $i > j$) doesn’t count if the rank of the companion of $i$ is smaller than the rank of $j$.
 \end{itemize}
 
-  
+\section{Problem 7}
+If $\boldsymbol{w} \in \mathbb{R}^{d}$ and $\boldsymbol{x} \in \mathbb{R}^{d}$, and $f(\boldsymbol{w}) = sin(\boldsymbol{x}^{T}\boldsymbol{w})$, find expressions for $\frac{\partial f(\boldsymbol{w})}{\partial \boldsymbol{w}}$ and $\frac{\partial^{2} f(\boldsymbol{w})}{\partial \boldsymbol{w} \partial \boldsymbol{w}^{T}}$.
+
+\subsection{Solution to Problem 7}
+$$\frac{\partial f(\boldsymbol{w})}{\partial \boldsymbol{w}} = x^{T}\cos(x^{T}w)$$
 
 \end{document}
