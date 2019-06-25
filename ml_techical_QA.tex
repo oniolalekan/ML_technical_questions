@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{amsmath}
 
 \begin{document}
 
@@ -105,7 +106,7 @@ $$ 3.3\%  \textit{(1dp)}$$
 	\label{fig:pythoncode}
 \end{figure}
 
-\section{Problem 1 }
+\section{Problem 1 **COMPLETED**}
 Each night, a princess is equally likely to sleep on anything from six to twelve mattresses. On half of the nights of the year, a pea is placed underneath the lowest mattress. She never falls asleep if a pea is placed underneath a pile of six mattresses. If the pea is placed underneath seven mattresses, she sleeps wonderfully one night out of ten; under eight mattresses, she sleeps well two out of ten nights; and so on, until if the pea is placed underneath the full twelve mattresses, she sleeps well six out of ten nights. One morning, when her good friend Bayes woke her up, she said that she had slept incredibly well that night! What is the expected number of mattresses upon which she slept? \\\\
 \subsection{Solution to Problem 1}
 The expected value (or mean) of $X$, where $X$ is the expected number of mattresses is a discrete random variable. Let the expected value of $X$ be written as $E(X)$. \\\\
@@ -124,7 +125,25 @@ The expected value (or mean) of $X$, where $X$ is the expected number of mattres
 $ E(X) = S \times P(X = x) $ \\ \\
 $ = 6 \times P(X=6) + 7 \times P(X=7) + 8 \times P(X=8) + 9 \times P(X=9) + 10 \times P(X=10) + 11 \times P(X=11) + 12 \times P(X=12)$ \\ \\
 $$= 0 + \frac{7}{10} + \frac{16}{10} + \frac{36}{10} + \frac{40}{10} + \frac{55}{10} + \frac{72}{10}$$ \\
-$$22.6$$
+$$=22.6$$
 
+\section{Problem 9}
+Consider $n$ chords on a circle, each defined by its endpoints. Describe an $O(nlogn)$-time algorithm to determine the number of pairs of chords that intersect inside the circle. (For example, if the $n$ chords are all diameters that meet at the center, then the correct answer is $\binom n2$). Assume that no two chords share an endpoint.
+
+\subsection{Solution to Problem 9}
+
+\begin{itemize}
+	\item Choose a point on the circle and assign it key value 1. The rank of any point will be its position when read in the sequence starting with point 1, and reading clockwise around the circle.
+	\item  Next, we label each point with a key. Reading clockwise around the circle.
+	\begin{itemize}
+		\item If a point’s chordal companion has a key, assign it
+		the same key.
+		\item Otherwise, assign it the next lowest unused integer key value. 
+	\end{itemize} 
+	\item Then use the algorithm given in Listing 1 to count the
+	number of inversions (based on key value), with the caveat that an inversion from key $i$ to key $j$ (with $i > j$) doesn’t count if the rank of the companion of $i$ is smaller than the rank of $j$.
+\end{itemize}
+
+  
 
 \end{document}
