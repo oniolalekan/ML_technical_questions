@@ -98,7 +98,6 @@ The Python code snippet is shown in Figure 1. Percentage of the 21st century Wed
 $$ = \frac{172}{5242} \times 100 \% $$
 $$ 3.3\%  \textit{(1dp)}$$
 
-
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.2\linewidth, height=0.6\textheight]{pythonCode2}
@@ -106,8 +105,26 @@ $$ 3.3\%  \textit{(1dp)}$$
 	\label{fig:pythoncode}
 \end{figure}
 
+\section{Problem 1 }
+Each night, a princess is equally likely to sleep on anything from six to twelve mattresses. On half of the nights of the year, a pea is placed underneath the lowest mattress. She never falls asleep if a pea is placed underneath a pile of six mattresses. If the pea is placed underneath seven mattresses, she sleeps wonderfully one night out of ten; under eight mattresses, she sleeps well two out of ten nights; and so on, until if the pea is placed underneath the full twelve mattresses, she sleeps well six out of ten nights. One morning, when her good friend Bayes woke her up, she said that she had slept incredibly well that night! What is the expected number of mattresses upon which she slept? \\\\
+\subsection{Solution to Problem 1}
+The expected value (or mean) of $X$, where $X$ is the expected number of mattresses is a discrete random variable. Let the expected value of $X$ be written as $E(X)$. \\\\
 
 
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+	\hline 
+	Number of mattresses, S& 6 &7  & 8 & 9 &10  &11  & 12 \\ 
+	\hline 
+	isAsleep?& no & yes & yes & yes & yes & yes & yes \\ 
+	\hline 
+	Probability of good sleep with pea, $P(X=x)$& 0 & $\frac{1}{10}$ & $\frac{2}{10}$ & $\frac{3}{10}$ & $\frac{4}{10}$ & $\frac{5}{10}$ & $\frac{6}{10}$ \\ 
+	\hline 
+\end{tabular} \\\\
+
+$ E(X) = S \times P(X = x) $ \\ \\
+$ = 6 \times P(X=6) + 7 \times P(X=7) + 8 \times P(X=8) + 9 \times P(X=9) + 10 \times P(X=10) + 11 \times P(X=11) + 12 \times P(X=12)$ \\ \\
+$$= 0 + \frac{7}{10} + \frac{16}{10} + \frac{36}{10} + \frac{40}{10} + \frac{55}{10} + \frac{72}{10}$$ \\
+$$22.6$$
 
 
 \end{document}
